@@ -17,5 +17,5 @@ make
 ./main
 ```
 ## commands
-F2 - toggle light on or off
-F3 - toggle line mesh
+* F2 - toggle light on or off
+* F3 - toggle line mesh
