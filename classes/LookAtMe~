@@ -1,0 +1,25 @@
+[reminder]
+
+well the requirements for this classes to work fine are:
+
+1. SDL2
+2. SDL2_Image
+3. Freeglut	(GL Utility Toolkit)
+4. OpenGL
+5. Glew (GL Extension Wrangler)
+
+
+notes: 
+	the SDL libraries act as replacement for jpeglib for loading
+	jpeg images.
+	
+	Its a whole lot easier to do with SDL2_Image.
+
+NB: 
+	AND PLEASE DON'T TRY WRITING A 3DS LOADER FROM SCRATCH
+	AGAIN, Eee GET WHY :(
+	   
+
+// THE REST IS JUST TO MAKE THIS FILE EXACTLY 512B
+FJKFAJSDFAJDSFJWNOIJQFOIJFQOIWJEFOQIJWF;KQJFDFD
+KFJLJKDSF;DKS; 512B
