@@ -16,7 +16,10 @@
 #include "classes/TextureObjects.h"
 #include "classes/TextureObjects.cpp" /// Same here
 #include "classes/events/EventHandler.h"  ///  for keyboard events
+
 #define MAX_TEX 10
+#define WIDTH 800
+#define HEIGHT 760
 
 using namespace std;
 
@@ -64,7 +67,6 @@ void initGL()
 
     glEnable(GL_LIGHT0);
 
-    loadModel("grenade.3DS");
 }
 
 
@@ -200,16 +202,18 @@ void specialKeys(int key,int x,int y)
 
 int main(int argc,char ** argv)
 {
-    int width,height;
-    width = 800;
-    height = 760;
+    if(argc < 2)
+    {
+        printf("Usage: ./main [filename.3ds]\n");
+        exit(1);
+    }
 
     glutInit(&argc,argv);
     glutInitDisplayMode(GLUT_RGB | GLUT_DEPTH | GLUT_DOUBLE);
     glutInitWindowPosition(0,0);
-    glutInitWindowSize(width,height);
+    glutInitWindowSize(WIDTH,HEIGHT);
 
-    glutCreateWindow("my window something");
+    glutCreateWindow(argv[1]);
 
     glutDisplayFunc(render);
     glutIdleFunc(idle);
@@ -217,6 +221,7 @@ int main(int argc,char ** argv)
     glutKeyboardFunc(keyboard);
     glutReshapeFunc(reshape);
     initGL();
+    loadModel(argv[1]);
     glutMainLoop();
 
 
