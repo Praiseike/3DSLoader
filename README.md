@@ -14,8 +14,9 @@ make
 ```
 
 ```
-./main
+./main [filename.3ds]
 ```
 ## commands
 * F2 - toggle light on or off
 * F3 - toggle line mesh
+* Use left,right,up ,down to move
